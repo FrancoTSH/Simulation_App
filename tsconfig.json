@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "es2019",
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "downlevelIteration": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "lib": [
+        "es2019",
+        "dom",
+        "dom.iterable"
+      ],
+      "removeComments": true,
+      "outDir": "./dist/js",
+      "types": [
+        "node"
+      ] 
+    },
+    "include": [
+      "./src/scripts/**/*"
+    ]
+}

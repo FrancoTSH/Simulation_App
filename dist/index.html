@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body style="overflow-x: hidden;">
+    <div class="container">
+        <h2 class="text-center my-4">Simulación de un sistema de inventario</h2>
+        <div class="config p-4 border mb-4">
+            <h4>Configuración</h4>
+            <div class="mt-4">
+                <form id="input-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row g-3 align-items-center mb-2">
+                                <div class="col-auto">
+                                    <label for="cant_replicas" class="col-form-label">Cantidad de réplicas:</label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="number" id="cant_replicas" name="cant" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row g-3 align-items-center mb-2" id="cont">
+                                <div class="col-auto">
+                                    <label for="cant" class="col-form-label">Numero de politicas:</label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="number" id="cant_pol" name="cant" class="form-control">
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" id="btn-add" class="btn btn-secondary">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 justify-content-center">   
+                        <button type="submit" class="btn btn-primary btn-lg w-25" id="btn-sim" disabled>Simular</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="data row gx-0">
+            <div class="col-md-6 p-4 border">
+                <h5 class="mb-4">Tabla de costos promedio</h5>
+                <div id="table-container" style="overflow-x: auto;">
+
+                </div>
+                <h5 class="my-4">Intervalos de confianza</h5>
+                <div class="data" id="table-ic">
+
+                </div>
+            </div>
+            <div class="col-md-6 p-4 border">
+                <h5>Gráficos</h5>
+                <div class="row justify-content-center mt-5">
+                    <div class="chart-container">
+                        <canvas id="chart" width="800"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
